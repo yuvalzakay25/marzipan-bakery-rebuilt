@@ -12,6 +12,7 @@ import MahaneYehudaStreet from "../../assets/MahaneYehudaStreet.jpg";
 function About() {
   return (
     <section className="w-full py-24 bg-[#FFFDF9]">
+      
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 px-6 font-sans items-center">
         {/* img left side*/}
         {/* המכולה של התמונות - תופסת 5 יחידות מתוך 12 */}
