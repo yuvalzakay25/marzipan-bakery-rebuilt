@@ -7,8 +7,8 @@ import {
   FaShoppingBag,
   FaWhatsapp,
 } from "react-icons/fa";
-import { CartContext } from "../../context/CartContext";
-import CheckoutModal from "../../components/CheckoutModal/CheckoutModal";
+import { CartContext } from "../../context/CartContext.jsx";
+import CheckoutModal from "../../components/CheckoutModal/CheckoutModal.jsx";
 
 function CartDrawer() {
   // מצב שמנהל אם המודל פתוחה או סגורה,

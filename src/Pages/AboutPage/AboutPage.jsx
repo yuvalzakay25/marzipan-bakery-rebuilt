@@ -13,8 +13,8 @@ import {
 // וודא שהנתיבים לתמונות אצלך בתיקיית assets נכונים
 import OwnersHero from "../../assets/OwnersHero.jpg";
 import BakeryInterior from "../../assets/BakeryInterior.jpg";
-import AboutPageCard from "./AboutPageCard";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import AboutPageCard from "./AboutPageCard.jsx";
+import PageTitle from "../../components/PageTitle/PageTitle.jsx";
 
 function AboutPage() {
   return (

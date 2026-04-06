@@ -4,7 +4,7 @@ import { FaRegStar } from "react-icons/fa";
 import { FaMedal } from "react-icons/fa";
 import { LuLeaf } from "react-icons/lu";
 
-import HeroBadge from "../Hero/HeroBadge";
+import HeroBadge from "../Hero/HeroBadge.jsx";
 import { Link } from "react-router-dom";
 
 function Hero() {

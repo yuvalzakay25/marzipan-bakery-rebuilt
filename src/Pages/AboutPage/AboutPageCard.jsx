@@ -1,4 +1,4 @@
-import React from "react";
+
 
 // אנחנו מקבלים את האייקון, הכותרת, התיאור, והאם זה הכרטיס המורם (isRaised)
 function AboutPageCard({ Icon, title, description, variant = "red" }) {

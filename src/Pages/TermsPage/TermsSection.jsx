@@ -1,4 +1,4 @@
-import React from "react";
+
 
 function TermsSection({ title, icon: Icon, children, headerColor = "bg-[#380909]" }) {
   return (

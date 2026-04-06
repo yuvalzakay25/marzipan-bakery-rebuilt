@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   FaPaperPlane,
   FaWhatsapp,
@@ -7,7 +7,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import contactBg from "../../assets/contact_bg_v2.png";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import PageTitle from "../../components/PageTitle/PageTitle.jsx";
 
 const BRANCHES_EXAMPLE = [
   { id: 1, name: "שוק מחנה יהודה", address: "עץ חיים 10" },

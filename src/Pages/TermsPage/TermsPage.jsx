@@ -1,9 +1,9 @@
-import React from "react";
+
 // ייבוא אייקונים מתוך react-icons (סט Font Awesome)
 import { FaArrowLeft, FaShieldAlt, FaRegFileAlt, FaLock } from "react-icons/fa";
-import TermsTitles from "./Termstitles";
-import TermsSection from "./TermsSection";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import TermsTitles from "./Termstitles.jsx";
+import TermsSection from "./TermsSection.jsx";
+import PageTitle from "../../components/PageTitle/PageTitle.jsx";
 
 function TermsPage() {
   return (

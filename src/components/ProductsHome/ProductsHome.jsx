@@ -1,4 +1,4 @@
-import ProductsPageCard from "./ProductsHomeCard";
+import ProductsPageCard from "./ProductsHomeCard.jsx";
 import { Link } from "react-router-dom";
 import { categoriesData } from "../../data/productsData";
 

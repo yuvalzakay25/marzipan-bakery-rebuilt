@@ -1,4 +1,4 @@
-import ProcessItem from "./ProcessItem";
+import ProcessItem from "./ProcessItem.jsx";
 import { LuMousePointerClick } from "react-icons/lu";
 import { LuSend } from "react-icons/lu";
 import { LuShoppingBag } from "react-icons/lu";

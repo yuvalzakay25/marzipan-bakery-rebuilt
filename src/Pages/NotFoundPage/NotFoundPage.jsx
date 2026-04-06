@@ -1,7 +1,7 @@
 // שימוש ב-react-icons/fa
 import { FaHome, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import PageTitle from "../../components/PageTitle/PageTitle.jsx";
 
 function NotFoundPage() {
   return (

@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import NavberListItem from "./NavberListItem";
+import NavberListItem from "./NavberListItem.jsx";
 import Logo from "../../assets/logo.jpg";
 import { Link, NavLink } from "react-router-dom";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../context/CartContext.jsx";
 import { FiFacebook, FiShoppingBag } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { IoIosMenu } from "react-icons/io";

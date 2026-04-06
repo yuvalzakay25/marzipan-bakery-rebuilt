@@ -1,6 +1,6 @@
 import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
-import FooterNavigation from "./FooterNavigation";
+import FooterNavigation from "./FooterNavigation.jsx";
 
 function Footer() {
   const currentYear = new Date().getFullYear();

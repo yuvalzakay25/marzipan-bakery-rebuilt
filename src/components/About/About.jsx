@@ -1,9 +1,9 @@
 import { FaRegHeart } from "react-icons/fa";
 import { GiDiamondTrophy } from "react-icons/gi";
 import { FaRegClock } from "react-icons/fa6";
-import AboutItem from "./AboutItem";
-import AboutParagraph from "./AboutParagraph";
-import AboutImg from "./AboutImg";
+import AboutItem from "./AboutItem.jsx";
+import AboutParagraph from "./AboutParagraph.jsx";
+import AboutImg from "./AboutImg.jsx";
 import MahaneYehudaNight from "../../assets/MahaneYehudaNight.jpg";
 import MarzipanShopfront from "../../assets/MarzipanShopfront.jpg";
 import BakeryInterior from "../../assets/BakeryInterior.jpg";

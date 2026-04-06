@@ -1,4 +1,4 @@
-import React from "react";
+
 // ייבוא אייקונים מתוך react-icons (סט Font Awesome)
 import {
   FaArrowLeft,
@@ -7,7 +7,7 @@ import {
   FaEye,
   FaMousePointer,
 } from "react-icons/fa";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import PageTitle from "../../components/PageTitle/PageTitle.jsx";
 
 function AccessibilityPage() {
   return (

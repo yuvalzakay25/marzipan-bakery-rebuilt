@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   FaMapMarkerAlt,
   FaPhone,
@@ -6,7 +6,7 @@ import {
   FaRoute,
   FaCircle,
 } from "react-icons/fa";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import PageTitle from "../../components/PageTitle/PageTitle.jsx";
 
 // import PremiumLogo from "../../assets/premium-logo.png";
 
