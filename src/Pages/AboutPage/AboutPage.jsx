@@ -1,13 +1,10 @@
-import React from "react";
 // שימוש בלעדי ב-react-icons/fa
 import {
   FaAward,
   FaHeart,
-  FaUtensils,
   FaQuoteRight,
   FaHistory,
   FaUsers,
-  FaStar,
 } from "react-icons/fa";
 
 // וודא שהנתיבים לתמונות אצלך בתיקיית assets נכונים
