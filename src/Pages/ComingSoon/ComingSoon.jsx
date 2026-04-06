@@ -5,20 +5,19 @@ import PageTitle from "../../components/PageTitle/PageTitle.jsx";
 function ComingSoon() {
     return (
         <div
-            // תיקון 1: הוספת Padding עליון (pt-24) כדי שה-Navbar לא יסתיר את התוכן במובייל
-            className="min-h-screen bg-[#FDFBF7] flex items-center justify-center p-6 pt-24 md:pt-0 text-center font-sans relative overflow-hidden select-none"
+            className="min-h-screen bg-[#FDFBF7] flex items-center justify-center mt-30 p-4    text-center font-sans relative overflow-hidden select-none"
             dir="rtl"
         >
             <PageTitle title="בקרוב - מאפיית מרציפן" />
 
             {/* תיקון 2: הוספת z-10 ומוודא שהכרטיס לא רחב מדי במובייל */}
-            <div className="max-w-2xl w-full bg-white/80 backdrop-blur-xl p-8 md:p-16 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl border border-[#D4AF37]/20 relative z-10 transition-all hover:shadow-[0_20px_60px_rgba(212,175,55,0.15)] duration-500">
+            <div className="max-w-2xl w-full bg-white/80 backdrop-blur-xl p-8  rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl border border-[#D4AF37]/20 relative z-10 transition-all hover:shadow-[0_20px_60px_rgba(212,175,55,0.15)] duration-500">
 
                 {/* תצוגת ה"בקרוב" */}
                 <div className="text-[#B91C1C] mb-8 flex justify-center">
                     <div className="relative">
                         {/* תיקון 3: הקטנת הטקסט הענק במובייל (text-7xl במקום 9xl) למניעת חריגה מהמסך */}
-                        <span className="text-7xl md:text-9xl font-black opacity-10 blur-[2px] select-none">
+                        <span className="text-6xl md:text-7xl font-black opacity-10 blur-[2px] select-none">
                             בקרוב
                         </span>
                         <div className="absolute inset-0 flex items-center justify-center">
