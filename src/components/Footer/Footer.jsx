@@ -1,10 +1,18 @@
-import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
+
 import FooterNavigation from "./FooterNavigation.jsx";
+import DeveloperCredit from "../DeveloperCredit.jsx/DeveloperCredit.jsx";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
-
+  const CONTACT_LINKS = {
+    whatsapp: "https://wa.me/972533339341",
+    phone: "tel:0533339341",
+    facebook: "https://www.facebook.com/marzipan.jerusalem/?locale=he_IL",
+    instagram: "https://www.instagram.com/marzipan_jerusalem/",
+    mail: "mailto:office@marzipan.co.il",
+  };
   return (
     <footer className="bg-[#380909] text-white border-t-4 border-[#D4AF37] z-10">
       {/* חלק עליון */}
@@ -26,17 +34,32 @@ function Footer() {
 
             {/* אייקונים חברתיים */}
             <div className="flex gap-4 pt-2">
-              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:bg-[#1877F2]">
+              <a
+                href={CONTACT_LINKS.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:bg-[#1877F2]"
+              >
                 <FaFacebookF size={18} />
-              </div>
+              </a>
 
-              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:bg-gradient-to-tr hover:from-[#f09433] hover:to-[#bc1888]">
+              <a
+                href={CONTACT_LINKS.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:bg-gradient-to-tr hover:from-[#f09433] hover:to-[#bc1888]"
+              >
                 <FaInstagram size={18} />
-              </div>
+              </a>
 
-              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:bg-[#1DA1F2]">
-                <FaTwitter size={18} />
-              </div>
+              <a
+                href={CONTACT_LINKS.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:bg-[#1df264]"
+              >
+                <FaWhatsapp size={18} />
+              </a>
             </div>
           </div>
 
@@ -64,25 +87,46 @@ function Footer() {
             </h3>
 
             <ul className="space-y-6 text-sm">
-              <li className="flex items-center gap-4 group">
-                <div className="p-2 rounded-full bg-white/5 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#380909] transition-all">
-                  <FiMapPin size={18} />
-                </div>
-                <span>אגריפס 44, ירושלים</span>
+              <li>
+                <a
+                  className="flex items-center gap-4 group"
+                  href="https://www.google.com/maps/place/%D7%90%D7%92%D7%A8%D7%99%D7%A4%D7%A1+44,+%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D%E2%80%AD/@31.7837815,35.2163294,17z/data=!3m1!4b1!4m6!3m5!1s0x1502d62837591069:0x4c77d96deb32a494!8m2!3d31.7837815!4d35.2137598!16s%2Fg%2F11h1htzch0?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="p-2 rounded-full bg-white/5 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#380909] transition-all">
+                    <FiMapPin size={18} />
+                  </div>
+                  <span>אגריפס 44, ירושלים</span>
+                </a>
               </li>
 
-              <li className="flex items-center gap-4 group">
-                <div className="p-2 rounded-full bg-white/5 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#380909] transition-all">
-                  <FiPhone size={18} />
-                </div>
-                <span dir="ltr">02-623-2626</span>
+              <li>
+                <a
+                  className="flex items-center gap-4 group"
+                  href={CONTACT_LINKS.phone}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="p-2 rounded-full bg-white/5 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#380909] transition-all">
+                    <FiPhone size={18} />
+                  </div>
+                  <span dir="ltr">053-333-9341</span>
+                </a>
               </li>
 
-              <li className="flex items-center gap-4 group">
-                <div className="p-2 rounded-full bg-white/5 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#380909] transition-all">
-                  <FiMail size={18} />
-                </div>
-                <span>office@marzipan.co.il</span>
+              <li>
+                <a
+                  className="flex items-center gap-4 group"
+                  href={CONTACT_LINKS.mail}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="p-2 rounded-full bg-white/5 text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-[#380909] transition-all">
+                    <FiMail size={18} />
+                  </div>
+                  <span>office@marzipan.co.il</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -116,6 +160,7 @@ function Footer() {
         </div>
       </section>
 
+      <DeveloperCredit />
       {/* חלק תחתון - רוחב מלא */}
       <div className="bg-black/70 py-6">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-red-200/50">

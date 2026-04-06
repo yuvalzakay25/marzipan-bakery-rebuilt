@@ -14,6 +14,7 @@ import TermsPage from "./Pages/TermsPage/TermsPage";
 import AccessibilityPage from "./Pages/AccessibilityPage/AccessibilityPage";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 import { CartProvider } from "./context/CartContext.jsx";
+import ComingSoon from "./Pages/ComingSoon/ComingSoon.jsx";
 
 // כאן אנחנו בונים את ה"מפה" - איזה URL מוביל לאיזה דף
 const router = createBrowserRouter([
@@ -49,11 +50,11 @@ const router = createBrowserRouter([
         path: "accessibility", // הכתובת תהיה domain.com/accessibility
         element: <AccessibilityPage />,
       },
-      { path: "holidays", element: <NotFoundPage /> },
-      { path: "holidays/rosh-hashana", element: <NotFoundPage /> },
-      { path: "holidays/pesach", element: <NotFoundPage /> },
-      { path: "holidays/purim", element: <NotFoundPage /> },
-      { path: "holidays/hanukkah", element: <NotFoundPage /> },
+      { path: "holidays", element: <ComingSoon /> },
+      { path: "holidays/rosh-hashana", element: <ComingSoon /> },
+      { path: "holidays/pesach", element: <ComingSoon /> },
+      { path: "holidays/purim", element: <ComingSoon /> },
+      { path: "holidays/hanukkah", element: <ComingSoon /> },
       {
         path: "*", // הכתובת תהיה domain.com/404
         element: <NotFoundPage />,

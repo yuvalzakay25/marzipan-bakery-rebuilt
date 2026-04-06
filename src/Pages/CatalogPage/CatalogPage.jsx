@@ -7,12 +7,15 @@ import PageTitle from "../../components/PageTitle/PageTitle.jsx";
 
 function CatalogPage() {
   // קבלת הפונקציה להוספת מוצר לעגלה מהקונטקסט
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, toggleCart } = useContext(CartContext);
   // state של שדה החיפוש
   const [searchTerm, setSearchTerm] = useState("");
   // קבלת פרמטר הקטגוריה מה-URL כדי לדעת איזה מוצרים להציג
   const [searchParams, setSearchParams] = useSearchParams();
   const category = searchParams.get("category");
+  // state לפתיחת וסגירת תפריט הקטגוריות במובייל
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   // איחוד פשוט של כל המוצרים
   const allProducts = [
     ...(productsData.rugelach || []),
@@ -88,9 +91,25 @@ function CatalogPage() {
 
         {/*  --- תוכן הדף - סרגל צד + גריד של מוצרים --- */}
         <div className="flex flex-col lg:flex-row gap-10 items-start">
+          {/* כפתור לפתיחת תפריט במובייל */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden w-full mb-4 py-4 bg-[#B91C1C] text-white rounded-2xl font-bold shadow-lg flex items-center justify-center gap-2"
+          >
+            <span>{isMenuOpen ? "סגור תפריט" : "בחר קטגוריה וחיפוש"}</span>
+            {/* כאן אפשר להוסיף אייקון של חץ קטן שיסתובב */}
+            <span
+              className={`transition-transform duration-300 ${isMenuOpen ? "rotate-180" : ""}`}
+            >
+              ▼
+            </span>
+          </button>
+
           {/* סרגל צד (Sidebar) */}
           {/* חיפוש */}
-          <aside className="w-full lg:w-[300px] shrink-0 space-y-6 lg:sticky lg:top-28">
+          <aside
+            className={`${isMenuOpen ? "block" : "hidden"} w-full lg:w-[300px] shrink-0 space-y-6 lg:sticky lg:top-28`}
+          >
             <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100">
               <div className="relative">
                 <input
@@ -104,6 +123,7 @@ function CatalogPage() {
               </div>
             </div>
 
+            {/* סרגל ניווט */}
             <nav className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100">
               <ul className="space-y-1">
                 {categoryButtons.map((item) => {
@@ -113,8 +133,11 @@ function CatalogPage() {
                   return (
                     <li key={item.id ? item.id : "all"}>
                       <button
-                        onClick={() => handleSelectCategoryClick(item.id)}
-                        className={`w-full text-right p-3.5 rounded-xl transition-all font-bold ${
+                        onClick={() => {
+                          handleSelectCategoryClick(item.id);
+                          setIsMenuOpen(false);
+                        }}
+                        className={` w-full text-right p-3.5 rounded-xl transition-all font-bold ${
                           isActive
                             ? "bg-[#B91C1C] text-white"
                             : "text-gray-600 hover:bg-gray-50"
@@ -133,11 +156,11 @@ function CatalogPage() {
           <main className="flex-1 w-full">
             {/* גריד של מוצרים */}
             {filteredProducts.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredProducts.map((product) => (
                   <article
                     key={product.id}
-                    className="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full group"
+                    className="cursor-pointer bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full group"
                   >
                     {/* תמונה בגובה קבוע למניעת קפיצות */}
                     <div className="h-56 overflow-hidden bg-gray-50">
@@ -168,7 +191,10 @@ function CatalogPage() {
                       {/* כפתור אדום - רוחב מלא */}
                       <button
                         className="mt-auto w-full py-4 bg-[#B91C1C] text-white rounded-2xl font-bold flex items-center justify-center gap-2 border-2 border-[#B91C1C] transition-all duration-300 hover:bg-white hover:text-[#B91C1C] shadow-md active:scale-95"
-                        onClick={() => addToCart(product)}
+                        onClick={() => {
+                          toggleCart();
+                          addToCart(product);
+                        }}
                       >
                         <span className="text-sm">הוסף לסל</span>
                         <FaPlus size={12} />

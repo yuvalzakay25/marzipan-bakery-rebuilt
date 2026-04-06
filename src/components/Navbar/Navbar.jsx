@@ -9,6 +9,7 @@ import { IoIosMenu } from "react-icons/io";
 
 const navLinks = [
   { name: "עמוד בית", path: "/" },
+  { name: "אודותינו", path: "/about" },
   { name: "הקטלוג המלא", path: "/catalog" },
   {
     path: "/holidays",
@@ -20,7 +21,6 @@ const navLinks = [
       { name: "חנוכה", path: "/holidays/hanukkah" },
     ],
   },
-  { name: "אודותינו", path: "/about" },
   { name: "סניפים", path: "/branches" },
   { name: "צור קשר", path: "/contact" },
 ];
@@ -59,6 +59,7 @@ function Navbar() {
         </Link>
         {/* לינקים */}
         <ul className="hidden lg:flex gap-10 text-sm tracking-widest">
+         
           {navLinks.map((link) => (
             <NavberListItem
               key={link.name}
@@ -87,7 +88,7 @@ function Navbar() {
           {/* כפתור הסל */}
           <button
             onClick={toggleCart}
-            className="group active:scale-95 hover:-translate-y-1 hover:shadow-xl flex items-center gap-2 p-2 lg:px-6 lg:py-2 rounded-full bg-red-700 text-white hover:text-red-700 hover:bg-white border-2 border-transparent hover:border-red-800 font-semibold transition-all duration-400"
+            className="cursor-pointer group active:scale-95 hover:-translate-y-1 hover:shadow-xl flex items-center gap-2 p-2 lg:px-6 lg:py-2 rounded-full bg-red-700 text-white hover:text-red-700 hover:bg-white border-2 border-transparent hover:border-red-800 font-semibold transition-all duration-400"
           >
             {/* האייקון והבועה - תמיד שם! */}
             <div className="relative ">
@@ -116,8 +117,14 @@ function Navbar() {
 
       {/* מובייל  */}
       <ul
-        className={` ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-500  overflow-y-auto fixed inset-0  bg-brand-cream/95 backdrop-blur-md z-40 flex flex-col items-center justify-start py-60 h-screen gap-5`}
+        className={`  ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-500  overflow-y-auto fixed inset-0  bg-brand-cream/95 backdrop-blur-md z-40 flex flex-col items-center justify-start py-60 h-screen gap-5`}
       >
+        <div
+          className="absolute top-10 right-10 text-2xl font-bold cursor-pointer"
+          onClick={handleOpenClick}
+        >
+          X
+        </div>
         {navLinks.map((link) => (
           <li key={link.name} className="relative group cursor-pointer py-2">
             {link.items ? (
