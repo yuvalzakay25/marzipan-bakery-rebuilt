@@ -208,7 +208,7 @@ function CatalogPage() {
                 className="py-20 bg-[#FDFBF7] flex items-center justify-center p-6 text-center font-sans relative overflow-hidden select-none"
                 dir="rtl"
               >
-                <div className="max-w-2xl w-full bg-white/80 backdrop-blur-xl  md:p-16 rounded-[3.5rem] shadow-2xl border border-[#D4AF37]/20 relative z-10 transition-all hover:shadow-[0_20px_60px_rgba(212,175,55,0.15)] duration-500">
+                <div className="max-w-2xl w-full bg-white/80 backdrop-blur-xl p-4 md:p-16 rounded-[3.5rem] shadow-2xl border border-[#D4AF37]/20 relative z-10 transition-all hover:shadow-[0_20px_60px_rgba(212,175,55,0.15)] duration-500">
                   {/* תצוגת ה-404 עם עומק */}
                   <div className="text-[#B91C1C] mb-8 flex justify-center">
                     <div className="relative">
