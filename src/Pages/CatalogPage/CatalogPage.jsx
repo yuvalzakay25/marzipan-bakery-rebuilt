@@ -212,11 +212,11 @@ function CatalogPage() {
                   {/* תצוגת ה-404 עם עומק */}
                   <div className="text-[#B91C1C] mb-8 flex justify-center">
                     <div className="relative">
-                      <span className="text-9xl font-black opacity-10 blur-[2px] select-none">
+                      <span className="text-5xl md:text-9xl font-black opacity-10 blur-[2px] select-none">
                         לא מצאנו התאמה
                       </span>
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-8xl font-black drop-shadow-lg tracking-tighter">
+                        <span className="text-4xl md:text-8xl font-black drop-shadow-lg tracking-tighter">
                           לא מצאנו התאמה
                         </span>
                       </div>
