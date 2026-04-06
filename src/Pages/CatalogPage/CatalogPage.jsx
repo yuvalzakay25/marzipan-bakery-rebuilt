@@ -108,7 +108,7 @@ function CatalogPage() {
           {/* סרגל צד (Sidebar) */}
           {/* חיפוש */}
           <aside
-            className={`${isMenuOpen ? "block" : "hidden"} w-full lg:w-[300px] shrink-0 space-y-6 lg:sticky lg:top-28`}
+            className={`${isMenuOpen ? "block" : "hidden"} lg:block w-full lg:w-[300px] shrink-0 space-y-6 lg:sticky lg:top-28`}
           >
             <div className="bg-white p-6 rounded-[2rem] shadow-sm border border-gray-100">
               <div className="relative">
@@ -137,11 +137,10 @@ function CatalogPage() {
                           handleSelectCategoryClick(item.id);
                           setIsMenuOpen(false);
                         }}
-                        className={` w-full text-right p-3.5 rounded-xl transition-all font-bold ${
-                          isActive
-                            ? "bg-[#B91C1C] text-white"
-                            : "text-gray-600 hover:bg-gray-50"
-                        }`}
+                        className={` w-full text-right p-3.5 rounded-xl transition-all font-bold ${isActive
+                          ? "bg-[#B91C1C] text-white"
+                          : "text-gray-600 hover:bg-gray-50"
+                          }`}
                       >
                         {item.label}
                       </button>
