@@ -47,19 +47,19 @@ function Navbar() {
     setIsHolidaysOpen((prevHolidays) => !prevHolidays);
   }
   return (
-    <nav className="fixed top-0  w-full p-6 bg-brand-cream/80 z-50 backdrop-blur-md  ">
+    <nav className="fixed top-0  w-full px-6 py-2 md:p-6 bg-brand-cream/80 z-50 backdrop-blur-md  ">
       <div className="max-w-7xl mx-auto flex items-center justify-between  ">
         {/* לוגו */}
         <Link path="/">
           <img
-            className="w-20 rounded-full cursor-pointer"
+            className="w-16 lg:w-18 rounded-full cursor-pointer"
             src={Logo}
             alt="Bakery Logo"
           />
         </Link>
         {/* לינקים */}
         <ul className="hidden lg:flex gap-10 text-sm tracking-widest">
-         
+
           {navLinks.map((link) => (
             <NavberListItem
               key={link.name}
@@ -120,7 +120,7 @@ function Navbar() {
         className={`  ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-500  overflow-y-auto fixed inset-0  bg-brand-cream/95 backdrop-blur-md z-40 flex flex-col items-center justify-start py-60 h-screen gap-5`}
       >
         <div
-          className="absolute top-10 right-10 text-2xl font-bold cursor-pointer"
+          className="absolute top-10 left-10 text-2xl font-bold cursor-pointer"
           onClick={handleOpenClick}
         >
           X

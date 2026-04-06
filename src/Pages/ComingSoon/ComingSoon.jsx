@@ -10,10 +10,10 @@ function ComingSoon() {
             dir="rtl"
         >
             <PageTitle title="בקרוב - מאפיית מרציפן" />
-            
+
             {/* תיקון 2: הוספת z-10 ומוודא שהכרטיס לא רחב מדי במובייל */}
             <div className="max-w-2xl w-full bg-white/80 backdrop-blur-xl p-8 md:p-16 rounded-[2.5rem] md:rounded-[3.5rem] shadow-2xl border border-[#D4AF37]/20 relative z-10 transition-all hover:shadow-[0_20px_60px_rgba(212,175,55,0.15)] duration-500">
-                
+
                 {/* תצוגת ה"בקרוב" */}
                 <div className="text-[#B91C1C] mb-8 flex justify-center">
                     <div className="relative">
