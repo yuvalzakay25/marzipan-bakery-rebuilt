@@ -117,7 +117,7 @@ function Navbar() {
 
       {/* מובייל  */}
       <ul
-        className={`  ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-500  overflow-y-auto fixed inset-0  bg-brand-cream/95 backdrop-blur-md z-40 flex flex-col items-center justify-start py-60 h-screen gap-5`}
+        className={`  ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-500  overflow-y-auto fixed inset-0  bg-brand-cream/95 backdrop-blur-md z-40 flex flex-col items-center justify-start py-40 h-screen gap-5`}
       >
         <div
           className="absolute top-10 left-10 text-2xl font-bold cursor-pointer"
